@@ -25,7 +25,7 @@ import lombok.EqualsAndHashCode;
 public class Programozo extends Alkalmazott {
 
 
-  public Programozo(Integer id, String nev, String lakcim, Date szuletesi_Datum, String telefonszam,
+  public Programozo(Integer id, String nev, String lakcim, LocalDate szuletesi_Datum, String telefonszam,
       String email, boolean deleted) {
     super(id, nev, lakcim, szuletesi_Datum, telefonszam, email, deleted);
   }
@@ -46,7 +46,7 @@ public class Programozo extends Alkalmazott {
   private List<Alkalmazott> beosztottak;
 
 
-  public Programozo(Integer id, String nev, String lakcim, Date szuletesi_Datum,
+  public Programozo(Integer id, String nev, String lakcim, LocalDate szuletesi_Datum,
       String telefonszam, String email, boolean deleted, Feladatkor feladatkor, boolean gyakornok,
       List<Projekt> projektek, ProjektMenedzser projektmenedzser, List<Alkalmazott> beosztottak) {
     super(id, nev, lakcim, szuletesi_Datum, telefonszam, email, deleted);
@@ -63,7 +63,7 @@ public class Programozo extends Alkalmazott {
     this.beosztottak = new ArrayList<>();
   }
 
-  public Programozo(Integer id, String nev, String lakcim, Date szuletesi_Datum,
+  public Programozo(Integer id, String nev, String lakcim, LocalDate szuletesi_Datum,
       String telefonszam, String email, boolean deleted, boolean gyakornok, List<Projekt> projektek,
       ProjektMenedzser projektmenedzser, List<Alkalmazott> beosztottak) {
     super(id, nev, lakcim, szuletesi_Datum, telefonszam, email, deleted);

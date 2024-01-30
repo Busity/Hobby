@@ -13,6 +13,7 @@ import jakarta.persistence.TemporalType;
 import java.time.LocalDate;
 import java.util.Date;
 import lombok.Data;
+import org.springframework.cglib.core.Local;
 import org.springframework.data.relational.core.mapping.Table;
 
 
@@ -34,7 +35,7 @@ public class Alkalmazott {
   @Column(name = "Bday", columnDefinition = "date")
   @Temporal(TemporalType.DATE)
   @JsonFormat(pattern = "yyyy/MM/dd")
-  private Date szuletesi_Datum;
+  private LocalDate szuletesi_Datum;
 
   @Column(name = "PhoneNumber")
   private String telefonszam;
@@ -48,7 +49,7 @@ public class Alkalmazott {
   }
 
   @SuppressWarnings("unused")
-  public Alkalmazott(Integer id, String nev, String lakcim, Date szuletesi_Datum,
+  public Alkalmazott(Integer id, String nev, String lakcim, LocalDate szuletesi_Datum,
       String telefonszam, String email, boolean deleted) {
     this.id = id;
     this.nev = nev;
@@ -83,11 +84,11 @@ public class Alkalmazott {
     this.lakcim = lakcim;
   }
 
-  public Date getSzuletesi_Datum() {
+  public LocalDate getSzuletesi_Datum() {
     return szuletesi_Datum;
   }
 
-  public void setSzuletesi_Datum(Date szuletesiDatum) {
+  public void setSzuletesi_Datum(LocalDate szuletesiDatum) {
     this.szuletesi_Datum = szuletesiDatum;
   }
 

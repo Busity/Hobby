@@ -32,12 +32,12 @@ public class ProjektMenedzser extends Alkalmazott {
   public ProjektMenedzser() {
   }
 
-  public ProjektMenedzser(Integer id, String nev, String lakcim, Date szuletesiDatum,
+  public ProjektMenedzser(Integer id, String nev, String lakcim, LocalDate szuletesiDatum,
       String telefonszam, String email, boolean deleted) {
     super(id, nev, lakcim, szuletesiDatum, telefonszam, email, deleted);
   }
 
-  public ProjektMenedzser(Integer id, String nev, String lakcim, Date szuletesi_Datum,
+  public ProjektMenedzser(Integer id, String nev, String lakcim, LocalDate szuletesi_Datum,
       String telefonszam, String email, boolean deleted, List<ProjektDTO> projektek,
       List<AlkalmazottDTO> beosztottak) {
     super(id, nev, lakcim, szuletesi_Datum, telefonszam, email, deleted);

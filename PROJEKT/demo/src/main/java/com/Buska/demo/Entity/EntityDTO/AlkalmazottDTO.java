@@ -7,17 +7,11 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import jakarta.persistence.Temporal;
-import jakarta.persistence.TemporalType;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Past;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import java.time.LocalDate;
-import java.util.Date;
 import lombok.Data;
 
 @Entity
@@ -34,9 +28,8 @@ public class AlkalmazottDTO {
   @NotBlank(message = "The address field cannot be empty")
   @Size(max = 50, message = "The maximum length of the address field can be 50 characters")
   private String lakcim;
-  @NotNull(message = "Date of birth cannot be empty")
   @Column(columnDefinition = "TIMESTAMP")
-  private Date szuletesi_Datum;
+  private LocalDate szuletesi_Datum;
   @Size(min = 8, max = 20, message = "The Employee's phone number must be between 4 and 20 characters")
   @Pattern(regexp = "^[0-9]{0,9}$", message = "The phone number can only contain numbers between 0 and 9")
   private String telefonszam;
@@ -46,7 +39,7 @@ public class AlkalmazottDTO {
   private String email;
   private boolean deleted;
 
-  public AlkalmazottDTO(Integer id, String nev, String lakcim, Date szuletesi_Datum,
+  public AlkalmazottDTO(Integer id, String nev, String lakcim, LocalDate szuletesi_Datum,
       String telefonszam, String email, boolean deleted) {
     this.id = id;
     this.nev = nev;
@@ -108,11 +101,11 @@ public class AlkalmazottDTO {
     this.lakcim = lakcim;
   }
 
-  public  Date getSzuletesi_Datum() {
+  public LocalDate getSzuletesi_Datum() {
     return szuletesi_Datum;
   }
 
-  public void setSzuletesi_Datum(Date szuletesi_Datum) {
+  public void setSzuletesi_Datum(LocalDate szuletesi_Datum) {
     this.szuletesi_Datum = szuletesi_Datum;
   }
 
