@@ -43,7 +43,8 @@ public class ProjektDTO {
   public ProjektDTO() {
   }
 
-  public ProjektDTO(String megrendelo, ProjektMenedzser projektMenedzser, String indulasiDatum, String leiras, boolean deleted) {
+  public ProjektDTO(String megrendelo, ProjektMenedzser projektMenedzser, String indulasiDatum,
+      String leiras, boolean deleted) {
     this.megrendelo = megrendelo;
     this.projektMenedzser = projektMenedzser;
     this.indulasiDatum = indulasiDatum;

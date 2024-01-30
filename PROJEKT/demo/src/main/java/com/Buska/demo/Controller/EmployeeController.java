@@ -68,7 +68,8 @@ public class EmployeeController {
     } catch (IllegalArgumentException e) {
       return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
     } catch (Exception e) {
-      return new ResponseEntity<>("An unknown error occurred: " + e.getMessage(), HttpStatus.BAD_REQUEST);
+      return new ResponseEntity<>("An unknown error occurred: " + e.getMessage(),
+          HttpStatus.BAD_REQUEST);
     }
   }
 

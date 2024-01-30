@@ -3,15 +3,11 @@ package com.Buska.demo.Entity;
 
 import com.Buska.demo.Entity.EntityDTO.AlkalmazottDTO;
 import com.Buska.demo.Entity.EntityDTO.ProjektDTO;
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import java.time.LocalDate;
 import java.util.Collections;
-import java.util.Date;
 import java.util.List;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

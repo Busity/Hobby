@@ -6,15 +6,10 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
-import jakarta.persistence.PrimaryKeyJoinColumn;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 import java.time.LocalDate;
-import java.util.Date;
 import lombok.Data;
-import org.springframework.cglib.core.Local;
-import org.springframework.data.relational.core.mapping.Table;
 
 
 @Data

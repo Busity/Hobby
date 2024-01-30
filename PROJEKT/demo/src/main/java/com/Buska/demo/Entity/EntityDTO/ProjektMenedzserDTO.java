@@ -2,7 +2,6 @@ package com.Buska.demo.Entity.EntityDTO;
 
 
 import com.Buska.demo.Entity.ProjektMenedzser;
-import jakarta.persistence.Entity;
 import jakarta.validation.constraints.NotNull;
 import java.util.Collections;
 import java.util.List;

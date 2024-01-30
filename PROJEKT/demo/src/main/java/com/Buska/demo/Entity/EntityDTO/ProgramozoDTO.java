@@ -3,7 +3,6 @@ package com.Buska.demo.Entity.EntityDTO;
 
 import com.Buska.demo.Entity.Programozo;
 import com.Buska.demo.Enum.Feladatkor;
-import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.validation.constraints.NotBlank;

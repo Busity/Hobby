@@ -7,17 +7,13 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 
 
 @Data
@@ -25,15 +21,9 @@ import lombok.EqualsAndHashCode;
 public class Programozo extends Alkalmazott {
 
 
-  public Programozo(Integer id, String nev, String lakcim, LocalDate szuletesi_Datum, String telefonszam,
-      String email, boolean deleted) {
-    super(id, nev, lakcim, szuletesi_Datum, telefonszam, email, deleted);
-  }
-
   @Enumerated(EnumType.STRING)
   @Column(name = "Duties")
   private Feladatkor feladatkor;
-
   private boolean gyakornok;
   @JoinColumn(name = "Projects")
   @OneToMany(fetch = FetchType.EAGER)
@@ -44,6 +34,11 @@ public class Programozo extends Alkalmazott {
   @JoinColumn(name = "Subordinates")
   @OneToMany(fetch = FetchType.EAGER)
   private List<Alkalmazott> beosztottak;
+  public Programozo(Integer id, String nev, String lakcim, LocalDate szuletesi_Datum,
+      String telefonszam,
+      String email, boolean deleted) {
+    super(id, nev, lakcim, szuletesi_Datum, telefonszam, email, deleted);
+  }
 
 
   public Programozo(Integer id, String nev, String lakcim, LocalDate szuletesi_Datum,
