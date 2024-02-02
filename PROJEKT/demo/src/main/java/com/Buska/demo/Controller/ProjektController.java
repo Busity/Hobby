@@ -42,7 +42,8 @@ public class ProjektController {
   @GetMapping("/{id}")
   public ResponseEntity<?> getProjektById(@PathVariable Integer id) {
     try {
-      ProjektDTO projektDTO = projektService.getProjektById(id);
+     // ProjektDTO projektDTO = projektService.getProjektById(id);
+      Integer projektDTO = projektService.getProjektById(id).getId();
       return new ResponseEntity<>(projektDTO, HttpStatus.OK);
     } catch (EntityNotFoundException e) {
       return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);

@@ -40,7 +40,18 @@ public class ProjektMenedzserController {
     }
   }
 
+  @GetMapping("/mind2")
+  public ResponseEntity<?> getAllEmployees2() {
+    try {
+      List<ProjektMenedzserDTO> employees = projektMenedzserService.getAllProjektMenedzser();
+      return new ResponseEntity<>(employees, HttpStatus.OK);
+    } catch (Exception e) {
+      return new ResponseEntity<>("An unknown error occurred.", HttpStatus.INTERNAL_SERVER_ERROR);
+    }
 
+
+
+ }
   @GetMapping("/{id}")
   public ResponseEntity<?> getEmployeeById(@PathVariable Integer id) {
     try {

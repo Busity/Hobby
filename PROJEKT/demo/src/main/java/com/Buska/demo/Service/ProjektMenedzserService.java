@@ -132,7 +132,6 @@ public class ProjektMenedzserService implements ProjektMenedzserMapper {
 
   }
 
-
   @Transactional
   public void deleteProjektMenedzser(Integer id) {
     if (id == null || id <= 0) {
@@ -146,7 +145,6 @@ public class ProjektMenedzserService implements ProjektMenedzserMapper {
 
     try {
       existingEmployee.setDeleted(true);
-      projektMenedzserRepository.save(existingEmployee);
     } catch (Exception e) {
       throw new RuntimeException("Deletion of the Project Manager failed.", e);
     }

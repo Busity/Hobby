@@ -34,6 +34,7 @@ public class EmployeeService {
         .collect(Collectors.toList());
   }
 
+
   public ProgramozoDTO getProgramozoById(Integer id) {
     if (id <= 0) {
       throw new IllegalArgumentException("The identifier is invalid.");
@@ -130,9 +131,9 @@ public class EmployeeService {
     }
 
     Programozo existingEmployee = programozoRepo.findById(id).orElse(null);
-    if (existingEmployee != null) {
+    if (existingEmployee != null)
       existingEmployee.setDeleted(true);
-    } else {
+    else {
       throw new IllegalArgumentException("Not found with Programmer ID:" + id);
     }
   }

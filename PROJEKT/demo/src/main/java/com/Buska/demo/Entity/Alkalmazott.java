@@ -43,7 +43,6 @@ public class Alkalmazott {
   public Alkalmazott() {
   }
 
-  @SuppressWarnings("unused")
   public Alkalmazott(Integer id, String nev, String lakcim, LocalDate szuletesi_Datum,
       String telefonszam, String email, boolean deleted) {
     this.id = id;
