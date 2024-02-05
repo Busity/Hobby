@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/ProjMan")
 public class ProjektMenedzserController {
 
+
   @Autowired
   private final ProjektMenedzserService projektMenedzserService;
 
@@ -29,6 +30,7 @@ public class ProjektMenedzserController {
   public ProjektMenedzserController(ProjektMenedzserService projektMenedzserService) {
     this.projektMenedzserService = projektMenedzserService;
   }
+
 
   @GetMapping("/mind1")
   public ResponseEntity<?> getAllEmployees1() {
@@ -40,6 +42,7 @@ public class ProjektMenedzserController {
     }
   }
 
+
   @GetMapping("/mind2")
   public ResponseEntity<?> getAllEmployees2() {
     try {
@@ -50,8 +53,8 @@ public class ProjektMenedzserController {
     }
 
 
+  }
 
- }
   @GetMapping("/{id}")
   public ResponseEntity<?> getEmployeeById(@PathVariable Integer id) {
     try {

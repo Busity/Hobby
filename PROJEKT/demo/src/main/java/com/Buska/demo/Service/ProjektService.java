@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 @Service
 public class ProjektService {
 
-  private ProjektRepo projektRepo;
+  private final ProjektRepo projektRepo;
 
   public ProjektService(ProjektRepo projektRepo) {
     this.projektRepo = projektRepo;

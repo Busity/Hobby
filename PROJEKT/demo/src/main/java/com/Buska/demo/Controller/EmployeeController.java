@@ -68,7 +68,8 @@ public class EmployeeController {
     } catch (IllegalArgumentException e) {
       return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
     } catch (Exception e) {
-      return new ResponseEntity<>("An unknown error occurred: " + e.getMessage() + e.initCause(new Throwable("Try Again")),
+      return new ResponseEntity<>(
+          "An unknown error occurred: " + e.getMessage() + e.initCause(new Throwable("Try Again")),
           HttpStatus.BAD_REQUEST);
     }
   }
@@ -90,7 +91,6 @@ public class EmployeeController {
   public ResponseEntity<?> deleteEmployee(@PathVariable Integer id) {
     try {
       employeeService.deleteProgramozo(id);
-
 
       return ResponseEntity.ok("The programmer has been successfully deleted!");
     } catch (EntityNotFoundException e) {

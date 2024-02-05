@@ -12,7 +12,7 @@ public interface ProgramozoMapper {
 
   ProgramozoMapper INSTANCE = Mappers.getMapper(ProgramozoMapper.class);
 
- 
+
   @Mapping(source = "id", target = "id")
   @Mapping(source = "nev", target = "nev")
   @Mapping(source = "lakcim", target = "lakcim")

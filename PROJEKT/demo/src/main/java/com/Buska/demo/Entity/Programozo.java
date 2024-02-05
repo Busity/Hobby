@@ -34,6 +34,7 @@ public class Programozo extends Alkalmazott {
   @JoinColumn(name = "Subordinates")
   @OneToMany(fetch = FetchType.EAGER)
   private List<Alkalmazott> beosztottak;
+
   public Programozo(Integer id, String nev, String lakcim, LocalDate szuletesi_Datum,
       String telefonszam,
       String email, boolean deleted) {
